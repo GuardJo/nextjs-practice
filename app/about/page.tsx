@@ -1,4 +1,8 @@
-import NavBar from "../../components/NavBar"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'About',
+};
 
 export default () => {
     return (

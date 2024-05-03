@@ -1,4 +1,8 @@
-import NavBar from "../components/NavBar";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Home",
+};
 
 export default () => {
     return (
@@ -6,4 +10,4 @@ export default () => {
             <h2>Hello NextJS</h2>
         </div>
     );
-}
+};

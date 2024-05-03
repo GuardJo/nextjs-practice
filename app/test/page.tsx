@@ -1,5 +1,9 @@
+import { Metadata } from "next";
 import CountButton from "../../components/CountButton"
-import NavBar from "../../components/NavBar"
+
+export const metadata: Metadata = {
+    title: 'Test',
+};
 
 export default () => {
     return (
