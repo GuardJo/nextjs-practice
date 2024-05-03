@@ -1,0 +1,31 @@
+{
+  "name": "nextjs-practice",
+  "version": "1.0.0",
+  "description": "NextJS 프레임워크 연습",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuardJo/nextjs-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuardJo/nextjs-practice/issues"
+  },
+  "homepage": "https://github.com/GuardJo/nextjs-practice#readme",
+  "dependencies": {
+    "next": "^13.5.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.8",
+    "@types/react": "18.3.1",
+    "typescript": "5.4.5"
+  }
+}
