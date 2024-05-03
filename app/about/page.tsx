@@ -1,10 +1,10 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../../components/NavBar"
 
 export default () => {
     return (
         <div>
             <NavBar />
-            <h2>Hello NextJS</h2>
+            <h1> About... </h1>
         </div>
     );
 }
