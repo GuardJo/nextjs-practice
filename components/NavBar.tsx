@@ -15,6 +15,9 @@ export default () => {
                 <li>
                     <Link href={'/about'}>About</Link>{currentPath === '/about' ? '😊' : ''}
                 </li>
+                <li>
+                    <Link href={'/test'}>Test</Link>{currentPath === '/test' ? '😊' : ''}
+                </li>
             </ul>
         </nav>
     );
