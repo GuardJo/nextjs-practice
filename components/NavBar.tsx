@@ -2,13 +2,14 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation";
+import styles from '../style/NavBar.module.css';
 
 export default () => {
     const currentPath = usePathname();
 
     return (
-        <nav>
-            <ul>
+        <nav className={styles.nav}>
+            <ul className={styles.list}>
                 <li>
                     <Link href={'/'}>Home</Link>{currentPath === '/' ? '😊' : ''}
                 </li>
