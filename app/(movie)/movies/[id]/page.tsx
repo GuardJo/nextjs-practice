@@ -1,19 +1,24 @@
 import { Metadata } from "next";
-import { getMovieDetail, getMovieVideos } from "../../../../service/MovieApiService";
+import MovieInfo from "../../../../components/MovieInfo";
+import MovieVideo from "../../../../components/MovieVideo";
+import { Suspense } from "react";
+import loading from "../../../loading";
 
 export const metadata: Metadata = {
     title: 'Movie Details',
 };
 
-export default async (param: Parameter) => {
+export default (param: Parameter) => {
     const movieId = param.params.id;
-
-    const [movieInfo, movieVideos] = await Promise.all([getMovieDetail(movieId), getMovieVideos(movieId)]);
 
     return (
         <div>
-            <h2>{movieInfo.title}</h2>
-            <h6>{JSON.stringify(movieVideos)}</h6>
+            <Suspense fallback={loading()}>
+                <MovieInfo id={movieId} />
+            </Suspense>
+            <Suspense fallback={loading()}>
+                <MovieVideo id={movieId} />
+            </Suspense>
         </div>
     );
 }

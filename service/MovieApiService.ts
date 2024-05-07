@@ -13,7 +13,7 @@ export async function getMovies() {
 
 export async function getMovieDetail(id: string) {
     // Loading Component Test 용
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     const response = await fetch(`${MOVIES_API}/${id}`);
     return response.json();
 }
