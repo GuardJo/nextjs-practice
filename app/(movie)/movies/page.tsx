@@ -1,4 +1,7 @@
-import Link from "next/link";
+
+import styles from "./movies.module.css";
+
+import MovieCard from "../../../components/MovieCard";
 import { getMovies } from "../../../service/MovieApiService";
 import { Metadata } from "next";
 
@@ -10,11 +13,9 @@ export default async () => {
     const movies = await getMovies();
 
     return (
-        <div>
+        <div className={styles.movies}>
             {movies.map((movie) => (
-                <li key={movie.id}>
-                    <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-                </li>
+                <MovieCard key={movie.id} id={movie.id} title={movie.title} poster_path={movie.poster_path} />
             ))}
         </div>
     );
