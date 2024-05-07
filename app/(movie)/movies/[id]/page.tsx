@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 export default async (param: Parameter) => {
     const movieId = param.params.id;
 
-    const movieInfo = await getMovieDetail(movieId);
-    const movieVideos = await getMovieVideos(movieId);
+    const [movieInfo, movieVideos] = await Promise.all([getMovieDetail(movieId), getMovieVideos(movieId)]);
 
     return (
         <div>
             <h2>{movieInfo.title}</h2>
+            <h6>{JSON.stringify(movieVideos)}</h6>
         </div>
     );
 }
