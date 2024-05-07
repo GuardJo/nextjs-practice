@@ -1,29 +1,30 @@
-import { Metadata } from "next";
 import MovieInfo from "../../../../components/MovieInfo";
 import { Suspense } from "react";
 import loading from "../../../loading";
 import MovieVideos from "../../../../components/MovieVideos";
+import { getMovieDetail } from "../../../../service/MovieApiService";
 
-export const metadata: Metadata = {
-    title: 'Movie Details',
-};
+export async function generateMetadata({ params: { id } }: IParameter) {
+    const movie = await getMovieDetail(id);
+    return {
+        title: movie.title,
+    };
+}
 
-export default (param: Parameter) => {
-    const movieId = param.params.id;
-
+export default ({ params: { id } }: IParameter) => {
     return (
         <div>
             <Suspense fallback={loading()}>
-                <MovieInfo id={movieId} />
+                <MovieInfo id={id} />
             </Suspense>
             <Suspense fallback={loading()}>
-                <MovieVideos id={movieId} />
+                <MovieVideos id={id} />
             </Suspense>
         </div>
     );
 }
 
-interface Parameter {
+interface IParameter {
     params: {
         id: string,
     }
