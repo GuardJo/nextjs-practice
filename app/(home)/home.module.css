@@ -1,0 +1,15 @@
+.home {
+    display: flex;
+    place-content: center;
+}
+
+.home div {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.home h2 {
+    font-size: 55px;
+}

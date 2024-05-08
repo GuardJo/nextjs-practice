@@ -1,3 +1,5 @@
+import styles from './home.module.css'
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -6,8 +8,10 @@ export const metadata: Metadata = {
 
 export default () => {
     return (
-        <div>
-            <h2>Hello NextJS</h2>
+        <div className={styles.home}>
+            <div>
+                <h2>Next JS</h2>
+            </div>
         </div>
     );
 };
