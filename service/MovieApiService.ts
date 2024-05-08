@@ -18,3 +18,8 @@ export async function getMovieVideos(id: string) {
     const response = await fetch(`${MOVIES_API}/${id}/videos`);
     return response.json();
 }
+
+export async function getMovieCredits(id: string) {
+    const response = await fetch(`${MOVIES_API}/${id}/credits`);
+    return response.json();
+}
