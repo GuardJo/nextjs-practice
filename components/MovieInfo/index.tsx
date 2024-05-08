@@ -13,6 +13,7 @@ export default async ({ id }: { id: string }) => {
                 <h2>{movieInfo.title}</h2>
                 <h3>⭐{movieInfo.vote_average.toFixed(2)}</h3>
                 <p>{movieInfo.overview}</p>
+                <Link href={`/movies/${id}/credits`}>Credits</Link>
                 {movieInfo.homepage === '' ? '' : <Link href={movieInfo.homepage} target={"_blank"}>Homepage 가기</Link>}
             </div>
         </div>

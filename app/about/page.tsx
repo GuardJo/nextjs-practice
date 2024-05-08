@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default () => {
     return (
         <div className={styles.about}>
-            <h1> About... </h1>
+            <h1>About...</h1>
         </div>
     );
 }
